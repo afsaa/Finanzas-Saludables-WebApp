@@ -77,6 +77,36 @@
     .header__menu--profile p {
       color: #ffffff;
     }
+
+    .main {
+      height: 300px;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main__title {
+      color: #ffffff;
+      font-size: 25px;
+    }
+
+    .input {
+      border: 2px solid #ffffff;
+      border-radius: 50px;
+      margin: 0;
+      padding: 0px 20px;
+      height: 40px;
+      outline: none;
+      background-color: #6eb7d8;
+      color: #132235;
+      width: 70%;
+      font-size: 25px;
+    }
+
+    ::placeholder {
+      color: #132235;
+    }
   </style>
   <body>
     <header>
@@ -93,11 +123,12 @@
       </div>
     </header>
 
-    <!-- <section>
-      <h1>Sección Principal</h1>
+    <section class="main">
+      <h1 class="main__title">Encuentra lo que buscas aquí</h1>
+      <input class="input" type="text" placeholder="Buscar..." />
     </section>
 
-    <footer>
+    <!-- <footer>
       <a href="#">Contactanos</a>
       <a href="#">Política de privacidad</a>
       <a href="#">Términos y condiciones</a>
