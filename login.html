@@ -3,30 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Finanzas Saludables - Inicia sesión</title>
   </head>
-  <style>
-    body {
-      font-family: "Roboto", sans-serif;
-      margin: 0;
-      background-color: #132235;
-    }
-
-    header {
-      width: 100%;
-      height: 100px;
-      display: flex;
-      justify-content: space-between;
-      background-color: #132235;
-    }
-
-    .header__img {
-      width: 250px;
-      height: 80px;
-      margin-top: 10px;
-      margin-left: 30px;
-    }
-  </style>
   <body>
     <header>
       <img class="header__img" src="assets/img/logo.png" alt="Logo" />
@@ -34,18 +13,20 @@
 
     <section class="login">
       <div class="login__container">
-        <h2 class="login__container--title">Inicio de Sesión</h2>
+        <h2>Inicio de Sesión</h2>
         <form class="login__container--form" action="">
-          <input class="input" type="text" placeholder="Correo" />
+          <input class="input" type="email" placeholder="Correo" />
           <input class="input" type="password" placeholder="Contraseña" />
-          <button class="button">Iniciar Sesión</button>
+          <button class="button">Iniciar sesión</button>
           <div class="login__container--remember-me">
-            <input
-              type="checkbox"
-              name="remember"
-              id="checkbox1"
-              value="checkbox"
-            />Recuerdame
+            <label>
+              <input
+                type="checkbox"
+                name="remember"
+                id="checkbox1"
+                value="checkbox"
+              />Recuérdame
+            </label>
             <a href="#">Olvidé mi contraseña</a>
           </div>
         </form>
