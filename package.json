@@ -1,0 +1,12 @@
+{
+  "name": "Finanzas-Saludables-WebApp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:src/css/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
