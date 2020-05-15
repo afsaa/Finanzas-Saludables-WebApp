@@ -4,3 +4,28 @@ $main-text-color: #ffffff;
 
 $headings-font: "Domine", serif;
 $body-font: "Montserrat", sans-serif;
+
+@mixin flex($vertically, $horizontally, $direction) {
+  display: flex;
+  align-items: $vertically;
+  justify-content: $horizontally;
+  flex-direction: $direction;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headings-font;
+}
+
+p,
+a {
+  font-family: $body-font;
+}
+
+body {
+  margin: 0;
+}
