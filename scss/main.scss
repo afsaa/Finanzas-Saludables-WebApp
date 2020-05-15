@@ -12,6 +12,45 @@ $body-font: "Montserrat", sans-serif;
   flex-direction: $direction;
 }
 
+@mixin widthAndHeight($width, $height) {
+  height: $height;
+  width: $width;
+}
+
+@mixin input(
+  $background-color,
+  $text-color,
+  $text-size,
+  $border-bottom-color,
+  $height
+) {
+  background-color: $background-color;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid $border-bottom-color;
+  outline: transparent;
+  color: $text-color;
+  margin: 10px 0px;
+  padding: 0px 10px;
+  font-size: $text-size;
+  height: $height;
+  letter-spacing: 1px;
+}
+
+@mixin button($background-color, $text-color, $text-size, $height) {
+  background-color: $background-color;
+  border: none;
+  border-radius: 25px;
+  color: $text-color;
+  cursor: pointer;
+  height: $height;
+  font-size: $text-size;
+  font-weight: bold;
+  margin: 20px 0px;
+  transition: 500ms background-color;
+}
+
 h1,
 h2,
 h3,
