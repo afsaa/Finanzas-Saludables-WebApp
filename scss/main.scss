@@ -118,3 +118,16 @@ body {
     color: $main-text-color;
   }
 }
+
+.main {
+  @include widthAndHeight(auto, 200px);
+  @include flex(center, center, column);
+  .main__title {
+    color: $main-text-color;
+    font-size: 25px;
+  }
+  .input {
+    width: 50%;
+    @include input(transparent, $secondary-color, 25px, $secondary-color, 40px);
+  }
+}
