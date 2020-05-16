@@ -14,6 +14,71 @@ a {
 
 body {
   margin: 0;
+  background-color: #132235;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: none;
+  justify-content: space-between;
+  flex-direction: none;
+}
+
+.header__img {
+  height: 80px;
+  width: 250px;
+  margin: 10px 0px 0px 30px;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: none;
+  flex-direction: none;
+  height: 100px;
+  width: auto;
+  margin-right: 30px;
+  position: relative;
+}
+.header__menu ul {
+  height: auto;
+  width: 120px;
+  display: none;
+  list-style: none;
+  padding: 0;
+  text-align: right;
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+.header__menu:hover ul {
+  display: block;
+}
+.header__menu li {
+  margin: 10px 0px;
+}
+.header__menu li a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+.header__menu--profile {
+  display: flex;
+  align-items: center;
+  justify-content: none;
+  flex-direction: none;
+}
+.header__menu--profile img {
+  width: 50px;
+  margin-right: 5px;
+}
+.header__menu--profile p {
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=main.css.map */
