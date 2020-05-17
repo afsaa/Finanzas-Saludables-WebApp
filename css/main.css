@@ -101,12 +101,71 @@ body {
   border-right: 0px;
   border-bottom: 2px solid #6eb7d8;
   outline: transparent;
-  color: #6eb7d8;
+  color: #ffffff;
   margin: 10px 0px;
   padding: 0px 10px;
   font-size: 25px;
   height: 40px;
   letter-spacing: 1px;
+}
+.main ::placeholder {
+  color: #ffffff;
+}
+
+.carousel {
+  width: 100%;
+  overflow: scroll;
+  padding: 0px 30px;
+  position: relative;
+}
+.carousel .carousel__container {
+  white-space: nowrap;
+  margin: 70px 0px;
+  padding-bottom: 10px;
+}
+.carousel .carousel-item {
+  height: 250px;
+  width: 200px;
+  border-radius: 20px;
+  background-color: #6eb7d8;
+  overflow: hidden;
+  margin-right: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 500ms all;
+  transform-origin: center left;
+  position: relative;
+}
+.carousel .carousel-item .carousel-item:hover ~ .carousel-item {
+  transform: translate3d(100px, 0, 0);
+}
+.carousel .carousel-item .carousel__container:hover .carousel-item {
+  opacity: 0.5;
+}
+.carousel .carousel-item .carousel-item__details > div > img {
+  height: 15px;
+  width: 15px;
+}
+.carousel .carousel-item .carousel-item__details--title {
+  margin: 5px 0px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.carousel .carousel-item .carousel-item__details--subtitle {
+  margin: 5px 0px;
+  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: #132235;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #6eb7d8;
 }
 
 /*# sourceMappingURL=main.css.map */
