@@ -51,6 +51,19 @@ $body-font: "Montserrat", sans-serif;
   transition: 500ms background-color;
 }
 
+@mixin footer($bg-color) {
+  background-color: $bg-color;
+  @include flex(center, space-around, initial);
+  @include widthAndHeight(100%, 100px);
+}
+@mixin footerLink($text-color) {
+  color: $text-color;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -219,18 +232,19 @@ body {
 }
 
 .footer {
-  background-color: $primary-color;
-  @include flex(center, space-around, initial);
-  @include widthAndHeight(100%, 100px);
+  @include footer($primary-color);
+  &-custom {
+    @include footer($secondary-color);
+  }
 }
 .footer a {
-  color: $main-text-color;
-  cursor: pointer;
-  font-size: 14px;
-  padding-left: 20px;
-  text-decoration: none;
+  @include footerLink($main-text-color);
 }
-.footer a:hover {
+.footer-custom a {
+  @include footerLink($primary-color);
+}
+.footer a:hover,
+.footer-custom a:hover {
   text-decoration: underline;
 }
 //  Login & Register
@@ -321,6 +335,21 @@ body {
 .button:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
+.page-not-found__title {
+  color: $primary-color;
+  font-size: 100px;
+  margin: 0;
+}
+.page-not-found__description {
+  color: $primary-color;
+  font-size: 20px;
+  font-weight: bold;
+}
+.page-not-found {
+  @include flex(center, center, column);
+  height: calc(100vh - 200px);
+  background: linear-gradient($primary-color, $secondary-color);
+}
 // Mobile first
 @media only screen and (max-width: 600px) {
   .login__container {
@@ -337,4 +366,30 @@ body {
   .footer a {
     margin: 5px;
   }
+}
+// Animations
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+@keyframes rubberBand {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+  40% {
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+  60% {
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.rubberBand {
+  animation-name: rubberBand;
 }

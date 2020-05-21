@@ -13,89 +13,9 @@
       href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/main.css">
     <title>Finanzas Saludables - Página no encontrada</title>
   </head>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Roboto", sans-serif;
-    }
-
-    .header {
-      width: 100%;
-      height: 100px;
-      display: flex;
-      justify-content: space-between;
-      background-color: #132235;
-    }
-    .header__img {
-      width: 250px;
-      height: 80px;
-      margin-top: 10px;
-      margin-left: 30px;
-    }
-    .animated {
-      animation-duration: 2.5s;
-      animation-fill-mode: both;
-      animation-iteration-count: infinite;
-    }
-    @keyframes rubberBand {
-      0% {
-        transform: scale(1);
-      }
-      30% {
-        transform: scaleX(1.25) scaleY(0.75);
-      }
-      40% {
-        transform: scaleX(0.75) scaleY(1.25);
-      }
-      60% {
-        transform: scaleX(1.15) scaleY(0.85);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-    .rubberBand {
-      animation-name: rubberBand;
-    }
-    .page-not-found {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      height: calc(100vh - 200px);
-      background: linear-gradient(#132235, #6eb7d8);
-    }
-    .page-not-found__title {
-      color: #132235;
-      font-size: 100px;
-      margin: 0;
-    }
-    .page-not-found__description {
-      color: #132235;
-      font-size: 20px;
-      font-weight: bold;
-    }
-    .footer {
-      background-color: #6eb7d8;
-      display: flex;
-      align-items: center;
-      height: 100px;
-      width: 100%;
-    }
-
-    .footer a {
-      color: #ffffff;
-      cursor: pointer;
-      font-size: 14px;
-      padding-left: 20px;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
   </style>
   <body>
     <header class="header">
@@ -109,7 +29,7 @@
       </p>
     </section>
 
-    <footer class="footer">
+    <footer class="footer-custom">
       <a href="#">Términos y condiciones</a>
       <a href="#">Política de privacidad</a>
       <a href="#">Centro de ayuda</a>

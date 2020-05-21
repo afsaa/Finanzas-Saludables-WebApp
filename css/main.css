@@ -205,6 +205,15 @@ body {
   height: 100px;
   width: 100%;
 }
+.footer-custom {
+  background-color: #6eb7d8;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: initial;
+  height: 100px;
+  width: 100%;
+}
 
 .footer a {
   color: #ffffff;
@@ -214,7 +223,16 @@ body {
   text-decoration: none;
 }
 
-.footer a:hover {
+.footer-custom a {
+  color: #132235;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+.footer a:hover,
+.footer-custom a:hover {
   text-decoration: underline;
 }
 
@@ -360,6 +378,27 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+.page-not-found__title {
+  color: #132235;
+  font-size: 100px;
+  margin: 0;
+}
+
+.page-not-found__description {
+  color: #132235;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.page-not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+  background: linear-gradient(#132235, #6eb7d8);
+}
+
 @media only screen and (max-width: 600px) {
   .login__container {
     background-color: transparent;
@@ -380,6 +419,32 @@ body {
   .footer a {
     margin: 5px;
   }
+}
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rubberBand {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+  40% {
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+  60% {
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.rubberBand {
+  animation-name: rubberBand;
 }
 
 /*# sourceMappingURL=main.css.map */
